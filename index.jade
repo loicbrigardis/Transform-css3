@@ -5,9 +5,17 @@ html(lang="fr")
     meta(charset='utf-8')
     link(href='/css/myStyle.css', rel='stylesheet')
   body
-  .trigger
-    .box
+    nav: ul
+      - var i = 0;
+        while (i++ < 4)
+          li menu #{i}
+            ul(class="drop-menu menu-#{i}")
+              li un
+              li deux
+              li trois
+              li quatre
+              li cinq
+              li six
 
     script(src='https://code.jquery.com/jquery-2.2.4.min.js')
     script(src='./main.js')
-

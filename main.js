@@ -1,3 +1,4 @@
-$('.trigger').on('click', function () {
-    $(this).toggleClass('clicked');
+$('.box').on('click', function () {
+    $(this).toggleClass('is-paused');
+    console.log('paused');
 });

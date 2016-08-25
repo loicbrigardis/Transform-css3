@@ -7,13 +7,251 @@ body {
   border: 20px solid #999;
   background: #ddd; }
 
-.box {
-  width: 200px;
-  height: 200px;
-  background: pink;
-  display: inline-block;
-  transition: transform 300ms ease-in-out;
-  pointer-events: none; }
+nav {
+  padding: 50px;
+  text-align: center; }
+  nav > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    background: #ddd;
+    border-radius: 5px; }
+    nav > ul > li {
+      float: left;
+      width: 150px;
+      height: 65px;
+      line-height: 65px;
+      position: relative;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.7);
+      cursor: pointer; }
+      nav > ul > li:hover {
+        background: #d5d5d5;
+        border-radius: 5px; }
 
-.trigger.clicked .box {
-  transform: translate(200px, 150px) rotate(20deg); }
+ul.drop-menu {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  padding: 0; }
+  ul.drop-menu li {
+    background: #666;
+    color: rgba(255, 255, 255, 0.7); }
+    ul.drop-menu li:hover {
+      background: #606060; }
+    ul.drop-menu li:last-child {
+      border-radius: 0px 0px 5px 5px; }
+
+ul.drop-menu li {
+  display: none; }
+
+li:hover > ul.drop-menu li {
+  display: block; }
+
+.menu-1 li {
+  opacity: 0; }
+  .menu-1 li:nth-child(1) {
+    animation-name: menu-1;
+    animation-duration: 200ms;
+    animation-delay: 0ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+  .menu-1 li:nth-child(2) {
+    animation-name: menu-1;
+    animation-duration: 200ms;
+    animation-delay: 150ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+  .menu-1 li:nth-child(3) {
+    animation-name: menu-1;
+    animation-duration: 200ms;
+    animation-delay: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+  .menu-1 li:nth-child(4) {
+    animation-name: menu-1;
+    animation-duration: 200ms;
+    animation-delay: 450ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+  .menu-1 li:nth-child(5) {
+    animation-name: menu-1;
+    animation-duration: 200ms;
+    animation-delay: 600ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+  .menu-1 li:nth-child(6) {
+    animation-name: menu-1;
+    animation-duration: 200ms;
+    animation-delay: 750ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+
+@keyframes menu-1 {
+  0% {
+    opacity: 0;
+    transform: rotateY(-90deg) translateY(-30px); }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.6) rotateY(-45deg) translateY(-30px); }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg) translateY(0px); } }
+
+.menu-2 li {
+  opacity: 0;
+  transform-origin: top left; }
+  .menu-2 li:nth-child(1) {
+    animation-name: menu-2;
+    animation-duration: 300ms;
+    animation-delay: 0ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+  .menu-2 li:nth-child(2) {
+    animation-name: menu-2;
+    animation-duration: 300ms;
+    animation-delay: 150ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+  .menu-2 li:nth-child(3) {
+    animation-name: menu-2;
+    animation-duration: 300ms;
+    animation-delay: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+  .menu-2 li:nth-child(4) {
+    animation-name: menu-2;
+    animation-duration: 300ms;
+    animation-delay: 450ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+  .menu-2 li:nth-child(5) {
+    animation-name: menu-2;
+    animation-duration: 300ms;
+    animation-delay: 600ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+  .menu-2 li:nth-child(6) {
+    animation-name: menu-2;
+    animation-duration: 300ms;
+    animation-delay: 750ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+
+@keyframes menu-2 {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg); }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg); } }
+
+.menu-3 li {
+  opacity: 0;
+  transform-origin: bottom right; }
+  .menu-3 li:nth-child(1) {
+    animation-name: menu-3;
+    animation-duration: 300ms;
+    animation-delay: 0ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+  .menu-3 li:nth-child(2) {
+    animation-name: menu-3;
+    animation-duration: 300ms;
+    animation-delay: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+  .menu-3 li:nth-child(3) {
+    animation-name: menu-3;
+    animation-duration: 300ms;
+    animation-delay: 600ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+  .menu-3 li:nth-child(4) {
+    animation-name: menu-3;
+    animation-duration: 300ms;
+    animation-delay: 900ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+  .menu-3 li:nth-child(5) {
+    animation-name: menu-3;
+    animation-duration: 300ms;
+    animation-delay: 1200ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+  .menu-3 li:nth-child(6) {
+    animation-name: menu-3;
+    animation-duration: 300ms;
+    animation-delay: 1500ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+
+@keyframes menu-3 {
+  0% {
+    opacity: 0;
+    transform: translateX(0px) translateY(0px); }
+  25% {
+    opacity: 0.25;
+    transform: translateX(5px) translateY(5px); }
+  50% {
+    opacity: 0.5;
+    transform: translateX(50px) translateY(50px); }
+  75% {
+    opacity: 0.75;
+    transform: translateX(5px) translateY(5px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px); } }
+
+.menu-4 li {
+  opacity: 0; }
+  .menu-4 li:nth-child(1) {
+    animation-name: menu-4;
+    animation-duration: 200ms;
+    animation-delay: 0ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+  .menu-4 li:nth-child(2) {
+    animation-name: menu-4;
+    animation-duration: 200ms;
+    animation-delay: 150ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+  .menu-4 li:nth-child(3) {
+    animation-name: menu-4;
+    animation-duration: 200ms;
+    animation-delay: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+  .menu-4 li:nth-child(4) {
+    animation-name: menu-4;
+    animation-duration: 200ms;
+    animation-delay: 450ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+  .menu-4 li:nth-child(5) {
+    animation-name: menu-4;
+    animation-duration: 200ms;
+    animation-delay: 600ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+  .menu-4 li:nth-child(6) {
+    animation-name: menu-4;
+    animation-duration: 200ms;
+    animation-delay: 750ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+
+@keyframes menu-4 {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateX(-25px); }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.3) translateX(15px); }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateX(0px); } }
